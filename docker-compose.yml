@@ -2,7 +2,7 @@ version: '3'
 
 services:
   jasperserver:
-    image: agois/jasperserver-ce:6.4.2
+    image: agois/jasperserver-ce:6.4.3
     ports:
       - "8080:8080"
       - "8443:8443"
@@ -19,7 +19,7 @@ services:
       - reportsnet
 
   jasperdatabase:
-    image: postgres:9.5
+    image: postgres:12-alpine
     env_file: .env
     volumes:
       - pgdata:/var/lib/postgresql/data
